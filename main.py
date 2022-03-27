@@ -229,12 +229,13 @@ def create_folder(path):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        usage="%(prog)s [OPTIONS] TERM",
+        usage="%(prog)s [OPTIONS] TERM FILES...",
         description=f"Search engine for audios with support for several audio sources. Powered by Deepgram.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="Source code: https://github.com/MiguelMJ/AudioSearchEngine-1",
     )
-    parser.add_argument("term", help="Word to search", metavar="TERM")
+    parser.add_argument("search", help="Word to search", metavar="TERM")
+    parser.add_argument("files", help="Files to perform the search", metavar="FILES", nargs="*")
     parser.add_argument("--no-ansi", help="Don't display color in the output", action="store_true")
     parser.add_argument(
         "-L",
@@ -323,6 +324,7 @@ if __name__ == "__main__":
     if args.no_ansi:
         no_color()
     set_log_level(args.log_level)
+    print(args)
     # Deepgram related info
     deepgram_api_key = args.deepgram_api_key or read_folder("deepgramApiKey")
     deepgram_params = {
@@ -338,7 +340,7 @@ if __name__ == "__main__":
             [k,v] = param.split("=")
             deepgram_params[k] = v
     log_info("Deepgram URL params:\n"+"\n".join(f"{k:15}{deepgram_params[k]}" for k in deepgram_params))
-    audios = []    
+    audios = args.files 
     # Telegram search
     if len(args.telegram_chat) > 0:
         if telethon == None:
@@ -363,7 +365,7 @@ if __name__ == "__main__":
             for audio in audios
         }
         # Do the search
-        hits = perform_search(transcriptions, args.term, context=args.context)
+        hits = perform_search(transcriptions, args.search, context=args.context)
         if args.output_file:
             with open(args.output_file, "w") as out:
                 json.dump(hits, ensure_ascii=False, file=out)
