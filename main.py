@@ -338,7 +338,6 @@ if __name__ == "__main__":
     if args.no_ansi:
         no_color()
     set_log_level(args.log_level)
-    print(args)
     # Deepgram related info
     deepgram_api_key = args.deepgram_api_key or read_file("deepgramApiKey")
     deepgram_params = {
