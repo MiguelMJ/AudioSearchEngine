@@ -232,7 +232,7 @@ def parse_arguments():
         usage="%(prog)s [OPTIONS] TERM FILES...",
         description=f"Search engine for audios with support for several audio sources. Powered by Deepgram.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="Source code: https://github.com/MiguelMJ/AudioSearchEngine-1",
+        epilog="Source code: https://github.com/MiguelMJ/AudioSearchEngine",
     )
     parser.add_argument("search", help="Word to search", metavar="TERM")
     parser.add_argument("files", help="Files to perform the search", metavar="FILES", nargs="*")
