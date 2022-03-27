@@ -211,7 +211,7 @@ def perform_search(transcriptions, term, **kargs):
 
 
 ## Function to assure that a file is read
-def read_folder(path):
+def read_file(path):
     try:
         with open(path) as f:
             text = f.read()
@@ -326,7 +326,7 @@ if __name__ == "__main__":
     set_log_level(args.log_level)
     print(args)
     # Deepgram related info
-    deepgram_api_key = args.deepgram_api_key or read_folder("deepgramApiKey")
+    deepgram_api_key = args.deepgram_api_key or read_file("deepgramApiKey")
     deepgram_params = {
         "language": "es",
         "model": "general",
@@ -345,8 +345,8 @@ if __name__ == "__main__":
     if len(args.telegram_chat) > 0:
         if telethon == None:
             abort(-1, "Search in Telegram requires the telethon package installed")
-        telegram_api_id = args.telegram_api_id or read_folder("telegramApiId")
-        telegram_api_hash = args.telegram_api_hash or read_folder("telegramApiHash")
+        telegram_api_id = args.telegram_api_id or read_file("telegramApiId")
+        telegram_api_hash = args.telegram_api_hash or read_file("telegramApiHash")
         for chat in args.telegram_chat:
             audios += asyncio.run(get_audios(
                 telegram_api_id,
