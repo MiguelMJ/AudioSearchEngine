@@ -68,6 +68,9 @@ Store them in files named `deepgramApiKey`, `telegramApiId` and `telegramApiHash
 - :star: Star this repository [![](https://img.shields.io/github/stars/MiguelMJ/AudioSearchEngine?style=social)](https://github.com/MiguelMJ/AudioSearchEngine/stargazers)
 - Raise an issue  [![](https://img.shields.io/github/issues/MiguelMJ/AudioSearchEngine?style=social&logo=github)](https://github.com/MiguelMJ/AudioSearchEngine/issues).
 
+## Contributors
+Empty section, for now ;)
+
 ## Ideas for the future
 
 - Add more remote audio sources, apart from Telegram chats (maybe Discord?).
