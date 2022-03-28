@@ -11,6 +11,8 @@
 
 Search for words inside audio files or Telegram voicemails. Powered by Deepgram. Requires API keys from Deepgram and optionally Telegram. Submission for Deepgram+DEV hackathon, 2022.
 
+You might want to read the [submission post](https://dev.to/miguelmj/hackathon-submission-an-audio-search-engine-powered-by-deepgram-3cf).
+
 ## Get the API keys
 - Deepgram (required): Create an account in deepgram.com and get an API key.
 - Telegram (optional): Create an account in Telegram and follow the steps here: [Obtaining api_id](https://core.telegram.org/api/obtaining_api_id)
