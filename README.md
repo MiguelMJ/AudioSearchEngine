@@ -64,7 +64,7 @@ Store them in files named `deepgramApiKey`, `telegramApiId` and `telegramApiHash
     ```
 
 ## Contributing
-- See the [CONTRIBUTING](CONTRIBUTING) file to make a PR.
+- See the [CONTRIBUTING](CONTRIBUTING.md) file to make a PR.
 - :star: Star this repository [![](https://img.shields.io/github/stars/MiguelMJ/AudioSearchEngine?style=social)](https://github.com/MiguelMJ/AudioSearchEngine/stargazers)
 - Raise an issue  [![](https://img.shields.io/github/issues/MiguelMJ/AudioSearchEngine?style=social&logo=github)](https://github.com/MiguelMJ/AudioSearchEngine/issues).
 
