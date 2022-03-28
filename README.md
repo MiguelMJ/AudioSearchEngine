@@ -15,6 +15,8 @@ Search for words inside audio files or Telegram voicemails. Powered by Deepgram.
 - Deepgram (required): Create an account in deepgram.com and get an API key.
 - Telegram (optional): Create an account in Telegram and follow the steps here: [Obtaining api_id](https://core.telegram.org/api/obtaining_api_id)
    
+Store them in files named `deepgramApiKey`, `telegramApiId` and `telegramApiHash` in the root folder or pass them directly in the CLI using the `--deepgram-api-key`, `--telegram-api-id` and `--telegram-api-hash` arguments.
+
 ## Features
 - **Tune the voice recognition process** with the Deepgram [query parameters for transcriptions pre-recorded audio](https://developers.deepgram.com/api-reference/#transcription-prerecorded) with `-P|--param KEY=VALUE` arguments.
 - Search directly in **local files** passing them as arguments after the search term.
