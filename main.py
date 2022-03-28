@@ -223,7 +223,7 @@ def read_file(path):
         with open(path) as f:
             text = f.read()
         log_info(f"Successfully read {path}")
-        return text
+        return text.strip()
     except IOError as e:
         abort(-1, f"Error encountered reading {path}: {e.what()}")
 
